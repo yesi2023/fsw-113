@@ -109,8 +109,8 @@ if (reserveLift == undefined) {
 // sum up the total number of parts and append that number to the text already in "totalItems" element.
 
 var sumTotal = document.querySelector("#totalItems");
-var outcomeTotal = parts.reduce(function (oldAmount, newAmount) {
-  return oldAmount + newAmount.qty;
+var outcomeTotal = parts.reduce(function (oldAmount, part) {
+  return oldAmount + part.qty;
 }, 0);
 
 sumTotal.textContent += ` : ${outcomeTotal}`;

@@ -22,8 +22,8 @@ const months = [
 
 let selectingMonth = document.querySelector("#selectingMonth");
 let selectTheYear = document.querySelector("#selectTheYear");
-let goButton = document.querySelector("#Go");
-selectingMonth.value = months[0];
+let goButton = document.querySelector("#go");
+//selectingMonth.value = months[0]; Has no effect remove this
 
 selectTheYear.value = new Date().getFullYear();
 window.addEventListener("load", function () {
@@ -32,17 +32,22 @@ window.addEventListener("load", function () {
       var selectMonth = document.createElement("option");
       selectMonth.textContent = months[y];
       selectMonth.setAttribute("value", months[y]);
+
+      if (new Date().getMonth() == y) //added this 
+      selectMonth.setAttribute("selected", true)// added this
+
       selectingMonth.append(selectMonth);
     }
   }
+  printCalendar();
 });
 
-let theGo = document.getElementById("go");
-theGo.addEventListener("click", printCalendar);
-printCalendar();
+goButton.addEventListener("click", printCalendar);
+//printCalendar(); Remove from here its been added to lone 42
 
 function printCalendar() {
   const today = new Date(`${selectingMonth.value} ${selectTheYear.value}`);
+  //console.log(`${selectingMonth.value} ${selectTheYear.value}`) to test and view on dev tools
   const months = today.getMonth();
 
   let days;
