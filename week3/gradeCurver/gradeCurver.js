@@ -1,19 +1,19 @@
 // declare each of the variables marked with "**" in the appropriate scope and using the appropriate type
 
+let mean = 0;
+let gradeSlice = 0;
+
 // create an event listener that calls the curveGrade() function when the Curve It!! button is clicked
 
-let agree = document.querySelector("#submit");
-agree.addEventListener("click", curveGrades);
+document.querySelector("#submit").addEventListener("click", curveGrades);
 
 // create an event listener that resets the scores and grades to their defaults when the Reset button is clicked
 
 let grading = document.querySelector("#grades");
-let totalScore = document.querySelector("#scores");
-let clean = document.querySelector("#reset");
 
-clean.addEventListener("click", function () {
+document.querySelector("#reset").addEventListener("click", function () {
   grading.textContent = "Curved Grades Shows Here";
-  totalScore.value = "";
+  document.querySelector("#scores").value = "";
 });
 
 function applyBell(grade, index, ary) {
@@ -51,8 +51,7 @@ function convertArray(obj) {
 // write the value of aryGrades to the grades div in the HTML document
 
 function curveGrades() {
-  const sumGrades = (array) =>
-    array.reduce((accumulator, currentValue) => accumulator + currentValue);
+  const sumGrades = (array) => array.reduce((accumulator, currentValue) => accumulator + currentValue);
 
   let aryGrades = convertArray(document.querySelector("#scores"));
 
