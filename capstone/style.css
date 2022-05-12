@@ -1,0 +1,117 @@
+/* 
+    Create all the style definitions necessary to make your app look as close 
+    to the example as possible. You will need to use display:grid to make the 
+    bug reports display in three columns (see week 4).
+*/
+
+* {
+  background-image: url(images/wallpaper.jpg);
+  margin: 3px;
+  box-sizing: border-box;
+}
+
+#reportWrapper {
+  border: 3px solid white;
+  border-radius: 15px;
+  width: 25%;
+  margin: 0 auto;
+  padding-bottom: 5px;
+  display: grid;
+}
+
+#topbar {
+  color: white;
+  background-image: none;
+  background-color: rgb(235, 11, 11);
+  border-radius: 5px;
+  width: 85%;
+  margin: 8px auto;
+  font-size: 20px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  margin-bottom: 2px;
+}
+
+#reporterByDiv,
+#bugDescrDiv {
+  margin: auto;
+  margin-bottom: 2px;
+}
+
+#systemDiv,
+#subSystemDiv {
+  width: 97%;
+  margin: auto;
+  margin-left: 0px;
+  margin-bottom: 2px;
+}
+
+#reportedBy,
+#system,
+#subSystem,
+#bugDesc {
+  background-image: none;
+  background-color: rgb(178, 174, 174);
+  font-size: 20px;
+  border-radius: 5px;
+}
+
+#resetBtn,
+#submitBtn {
+  background-image: none;
+  background-color: rgb(235, 11, 11);
+  color: white;
+  padding: 5px;
+  margin: 1px;
+  font-size: 15px;
+}
+
+#listWrapper {
+  border-radius: 10px;
+  width: 50%;
+  margin: auto;
+  margin-top: 0px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border: 2px solid white;
+}
+
+div,
+p {
+  background-image: none;
+}
+
+.divStyle {
+  background-image: none;
+  background-color: rgb(178, 174, 174);
+  height: 200px;
+  overflow-wrap: break-word;
+  display: flex;
+  flex-direction: column;
+}
+
+.checkbox {
+  width: 20px;
+  background-color: rgb(235, 11, 11);
+  border-radius: 25px;
+  text-align: center;
+}
+
+.delBtn {
+  width: 15px;
+  background-color: rgb(235, 11, 11);
+  border-radius: 25px;
+  text-align: center;
+}
+
+.flexContainer {
+  justify-self: baseline;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.resolveBug {
+  color: white;
+  background-image: url(images/wallpaper.jpg);
+}
